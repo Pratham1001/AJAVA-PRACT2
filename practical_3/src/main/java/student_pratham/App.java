@@ -1,13 +1,13 @@
-package student_pratham;
+package student_pratham ;
+import org.springframework.context.ApplicationContext;
 
-/**
- * Hello world!
- *
- */
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("");
+		Student s1 = (Student) ctx.getBean("studentBean");
+		System.out.print(s1.toString());
     }
 }
